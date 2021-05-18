@@ -35,6 +35,17 @@ Task 2 -- Ansible
     - Run the playbook: ansible-playbook ios-status.yml
 - Troubleshooting
     - ping CSR1kv
-    - Error output after trying to run playbook
+    - Error output(s) after trying to run playbook
 - Verification
     - Output after running playbook
+
+Task 3 -- Docker
+- Preparation
+    - Understand the Ansible playbook
+    - Understand the Linux commands equivalent to the playbook
+- Implementation
+    - Create bash script that build and run Docker image: build.sh
+- Troubleshooting
+    - Error output(s) during the building of the Docker image
+- Verification 
+    - docker ps -a (included in the biuld script)
