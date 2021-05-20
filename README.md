@@ -6,11 +6,7 @@ Task 1 -- GitHub
     - Created a GitHub account with readme
     - Created a public repository, named "Devasc_Skill", on Github
 - Implementation
-    - Created folder named "Devasc_Skill" on the DEVASC VM
-    - git init
-    - git config <>
-    - git remote add origin <>
-    - git pull origin main
+    - git clone <>
     - Modification of README.md
     - git add <>
     - git commit -m <>
@@ -49,3 +45,9 @@ Task 3 -- Docker
     - Error output(s) during the building of the Docker image
 - Verification 
     - docker ps -a (included in the biuld script)
+
+Task 4 -- Jenkins
+- Preparation
+    - Download Jenkins Docker image: docker pull jenkins/jenkins:lts
+    - Run Jenkins Docker container: docker run <>
+    
