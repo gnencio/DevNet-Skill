@@ -50,4 +50,40 @@ Task 4 -- Jenkins
 - Preparation
     - Download Jenkins Docker image: docker pull jenkins/jenkins:lts
     - Run Jenkins Docker container: docker run <>
-    
+    - Initial set up of Jenkins
+- Implementation
+    - Create a "Freestyle project" named "Task4BuildJob"
+        - Add GitHub repo and credential
+        - Add build "bash ./Task3/build.sh"
+    - Create a "Freestyle project" named "Task4TestJob"
+        - Set to build after "Task4BuildJob" is build
+        - Add build:
+            ```
+            if docker ps -a | grep "myinstance"; then
+	            exit 0
+            else
+	            exit 1
+            fi
+            ```
+    - Create a "Pipeline" named "Task4Pipeline"
+        ```
+        node {
+            stage('Preparation') {
+                catchError(buildResult: 'SUCCESS') {
+                    sh 'docker stop myinstance'
+                    sh 'docker rm myinstance'
+                } 
+            }
+            stage('Build') {
+                build 'Task4BuildJob'
+            }
+            stage('Results') {
+                build 'Task4TestJob'
+            }
+        }
+        ```   
+    - Build the "Task4Pipeline"
+- Troubleshooting
+    - After/while building, a job see "Cansole Output"
+- Verification
+    - Stage view of the "Task4Pipeline"
