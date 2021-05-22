@@ -1,25 +1,25 @@
 # DevNet Associate Skill Assessment
 Lists of accomplished tasks:
 
-Task 1 -- GitHub
+## Task 1 -- GitHub
 - Preparation
     - Created a GitHub account with readme
     - Created a public repository, named "Devasc_Skill", on Github
 - Implementation
-    - git clone <>
+    - `git clone <>`
     - Modification of README.md
-    - git add <>
-    - git commit -m <>
-    - git push origin main
+    - `git add <>`
+    - `git commit -m <>`
+    - `git push origin main`
 - Troubleshooting
-    - git config --list
-    - git remote --verbose
-    - git log
-    - git status
+    - `git config --list`
+    - `git remote --verbose`
+    - `git log`
+    - `git status`
 - Verification
     - Same as in troubleshooting 
 
-Task 2 -- Ansible
+## Task 2 -- Ansible
 - Preparation
     - Installed CSR1000v VM
     - Added ansible.cfg and hosts from 7.4.7 Lab
@@ -27,15 +27,15 @@ Task 2 -- Ansible
     - Create file ios-status.yml to use as Ansible playbook
     - Copy and modify text from "task source file"
     - Copy and adapt starting text of playbook from 7.4.7 Lab
-    - Install cisco.ios collection: ansible-galaxy collection install cisco.ios
-    - Run the playbook: ansible-playbook ios-status.yml
+    - Install cisco.ios collection: `ansible-galaxy collection install cisco.ios`
+    - Run the playbook: `ansible-playbook ios-status.yml`
 - Troubleshooting
     - ping CSR1kv
     - Error output(s) after trying to run playbook
 - Verification
     - Output after running playbook
 
-Task 3 -- Docker
+## Task 3 -- Docker
 - Preparation
     - Understand the Ansible playbook
     - Understand the Linux commands equivalent to the playbook
@@ -44,17 +44,17 @@ Task 3 -- Docker
 - Troubleshooting
     - Error output(s) during the building of the Docker image
 - Verification 
-    - docker ps -a (included in the biuld script)
+    - `docker ps -a` (included in the biuld script)
 
-Task 4 -- Jenkins
+## Task 4 -- Jenkins
 - Preparation
-    - Download Jenkins Docker image: docker pull jenkins/jenkins:lts
-    - Run Jenkins Docker container: docker run <>
+    - Download Jenkins Docker image: `docker pull jenkins/jenkins:lts`
+    - Run Jenkins Docker container: `docker run <>`
     - Initial set up of Jenkins
 - Implementation
     - Create a "Freestyle project" named "Task4BuildJob"
         - Add GitHub repo and credential
-        - Add build "bash ./Task3/build.sh"
+        - Add build `bash ./Task3/build.sh`
     - Create a "Freestyle project" named "Task4TestJob"
         - Set to build after "Task4BuildJob" is build
         - Add build:
@@ -87,3 +87,23 @@ Task 4 -- Jenkins
     - After/while building, a job see "Cansole Output"
 - Verification
     - Stage view of the "Task4Pipeline"
+
+## Task 5 -- RESTCONF
+- Preparation
+    - Set logging monitor on CSR1kv:
+        ```
+        # conf t
+        # logging monitor
+        # end
+        ```
+    - Test curl instructions
+- Implementation
+    - Create file "restconf.py"
+    - Adapt Python code from "RESTCONF Tutorial" webpage
+- Troubleshooting
+    - response.content has weird "content, printed the header
+    - Adapt to python3
+    - Check response codes
+- Verification
+    - Check response codes
+
