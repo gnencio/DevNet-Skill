@@ -84,7 +84,7 @@ Lists of accomplished tasks:
         ```   
     - Build the "Task4Pipeline"
 - Troubleshooting
-    - After/while building, a job see "Cansole Output"
+    - After/while building, a job see "Console Output"
 - Verification
     - Stage view of the "Task4Pipeline"
 
@@ -101,9 +101,34 @@ Lists of accomplished tasks:
     - Create file "restconf.py"
     - Adapt Python code from "RESTCONF Tutorial" webpage
 - Troubleshooting
-    - response.content has weird "content, printed the header
+    - response.content has weird content, printed the header instead
     - Adapt to python3
     - Check response codes
 - Verification
     - Check response codes
 
+
+## Task 6 -- Webex Teams API
+- Preparation
+    - Get the Webex API key
+- Implementation
+    - Create file named task6.py
+    - Adapt the code from Lab 8.6.7
+- Troubleshooting
+    - Use the documentation of developer.webex.com to discover how to upload files
+- Verification
+    - Check on the Webex app
+
+
+## Task 7 -- BASH
+- Preparation
+    - Copy the configuration files to ios_config subfolder
+- Implementation
+    - Create check_ios.sh and edit it by adapting "bash_scripting_exam_questions.txt" file
+    - Make it executable: `chmod +x check_ios.sh`
+    - Run it: `./check_ios.sh > check_ios.rep`
+- Troubleshooting
+    - Take care of error notification
+    - Note that in the string comparison maybe the line delimiter is included
+- Verification
+    - Verify correctness check_ios.rep file
