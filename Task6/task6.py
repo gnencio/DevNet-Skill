@@ -2,7 +2,7 @@ import requests
 import json
 from requests_toolbelt.multipart.encoder import MultipartEncoder
 
-access_token = 'ZjEzOWNiMDUtMDNmMi00ZjAxLTg5YTQtMDY3MjUwZTJmZTExYTU0OGJmYWYtZjMx_PF84_consumer'
+access_token = 'my_token'
 
 headers = {
     'Authorization': 'Bearer {}'.format(access_token),
